@@ -1,0 +1,7 @@
+Category,Quantified Impact,Regions Affected,Data Source,Weight
+Air Quality Degradation (PM10),33.6 µg/m³ increase in PM10 (50% of total PM10 during events),"Urban areas globally, significant in India and China",EPA HERO,50.0
+Air Quality Degradation (PM2.5),PM2.5 levels increased by 42% in urban areas during events,"Urban areas in the U.S., Europe, and Asia",EPA HERO,45.0
+Water Contamination (Perchlorate),Perchlorate levels exceeded safe thresholds in U.S. surface waters,"Surface waters across the U.S., notably near cities with large events",Environmental Protection Agency,40.0
+Wildlife Disturbance (Bird Populations),Estimated 5-10% decline in urban bird populations due to fireworks,Urban green spaces in Europe and North America,BirdLife Data Zone,35.0
+Wildlife Disturbance (Wildlife Stress),Significant stress observed in wildlife; red panda mortality documented,Edinburgh (Scotland) and other urban zoos globally,The Times,10.0
+Human Health Concerns (PM2.5),Asthma cases increased by 12% during post-fireworks periods,"Urban populations in Europe, U.S., and India",EPA HERO,25.0
