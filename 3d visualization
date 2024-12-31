@@ -1,0 +1,72 @@
+# Create a 3D scatter plot to represent the impacts of fireworks
+fig = go.Figure()
+
+# Add data points for the visualization
+fig.add_trace(go.Scatter3d(
+    x=dataset_visualization['Weight'],
+    y=dataset_visualization['Category'],
+    z=dataset_visualization['Regions Affected'],
+    mode='markers+text',  # Add markers and text labels
+    marker=dict(
+        size=dataset_visualization['Weight'] / 5,  # Dynamic scaling for better proportionality
+        color=dataset_visualization['Weight'],  # Use weight for color gradient
+        colorscale='Turbo',  # High-contrast, professional color scale
+        opacity=0.8
+    ),
+    text=dataset_visualization['Quantified Impact'],  # Text labels for hover
+    hoverinfo='text+x+y+z'  # Show detailed hover info
+))
+
+# Update layout for professional appearance
+fig.update_layout(
+    scene=dict(
+        xaxis=dict(
+            title='Weight',
+            gridcolor="lightgray",
+            zerolinecolor="gray",
+            backgroundcolor="white"
+        ),
+        yaxis=dict(
+            title='Category',
+            gridcolor="lightgray",
+            zerolinecolor="gray",
+            backgroundcolor="white"
+        ),
+        zaxis=dict(
+            title='Regions Affected',
+            gridcolor="lightgray",
+            zerolinecolor="gray",
+            backgroundcolor="white"
+        ),
+    ),
+    title=dict(
+        text="3D Impacts of New Year Fireworks on Wildlife, Air, and Water",
+        x=0.5,  # Center-align the title
+        font=dict(size=24, color='darkblue', family="Arial Black")
+    ),
+    margin=dict(t=50, l=50, r=50, b=50),  # Adjust margins
+    hoverlabel=dict(
+        font_size=14,
+        font_family="Arial",
+        bgcolor="#444444",  # Neutral dark gray for hover labels
+        font_color="white"  # White hover text
+    ),
+    paper_bgcolor="white",  # Clean white background
+    showlegend=False  # Remove legend for a cleaner look
+)
+
+# Add annotations for key insights (example)
+fig.add_trace(go.Scatter3d(
+    x=[max(dataset_visualization['Weight'])],
+    y=["Air Quality Degradation"],  # Example category
+    z=["Europe"],  # Example region
+    mode='text',
+    text=["Highest Impact"],  # Annotation text
+    textfont=dict(
+        size=12,
+        color='red'
+    )
+))
+
+# Display the visualization
+fig.show()
